@@ -3,6 +3,8 @@ const grabbed = document.getElementById('show');
 const temp = document.getElementById('temp');
 const day = document.getElementById('day');
 const body = document.querySelector('body');
+const title= document.querySelector('h1');
+const head= document.getElementsByClassName('head');
 
 
 const update = async(city)=>{
@@ -15,11 +17,14 @@ const update = async(city)=>{
        if(gettingId.IsDayTime == true){
            day.innerText = "yes"
            body.classList.add('day');
+           title.classList.add('text-white');
 
        }
        else{
            day.innerText = "No";
            body.classList.add('night');
+           head.classList.add('text-white');
+           
        }
    
 }
