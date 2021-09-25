@@ -15,7 +15,9 @@ const update = async(city)=>{
 
        temp.innerHTML = `<p>${gettingId.Temperature.Metric.Value} &deg;C </p>`;
        if(gettingId.IsDayTime == true){
-           day.innerText = "yes"
+
+           
+           day.innerText = `yes` 
            body.classList.add('day');
            title.classList.add('text-white');
 
