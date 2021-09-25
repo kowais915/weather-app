@@ -13,7 +13,7 @@ const update = async(city)=>{
        const gettingId = await weatherInfo(gettingCityInfo.Key);
        console.log(gettingId);
 
-       temp.innerHTML = `<p>${gettingId.Temperature.Metric.Value} &deg; C </p>`;
+       temp.innerHTML = `<p>${gettingId.Temperature.Metric.Value} &deg;C </p>`;
        if(gettingId.IsDayTime == true){
            day.innerText = "yes"
            body.classList.add('day');
