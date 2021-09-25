@@ -1,0 +1,10 @@
+.night{
+    background-image: url('night.jpg');
+    background-size: cover;
+}
+
+.day{
+    background-image: url('day.jpg');
+    background-size: cover;
+}
+
