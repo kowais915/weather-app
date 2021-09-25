@@ -11,7 +11,7 @@ const update = async(city)=>{
        const gettingId = await weatherInfo(gettingCityInfo.Key);
        console.log(gettingId);
 
-       temp.innerHTML += `<p>${gettingId.Temperature.Metric.Value} &deg; C </p>`;
+       temp.innerHTML = `<p>${gettingId.Temperature.Metric.Value} &deg; C </p>`;
        if(gettingId.IsDayTime == true){
            day.innerText = "yes"
        }
@@ -30,7 +30,7 @@ formm.addEventListener('submit', (e)=>{
     formm.reset();
 
     //show in browser
-grabbed.innerText += cityName;
+grabbed.innerText = cityName;
 
 update(cityName);
   
