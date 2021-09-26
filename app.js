@@ -5,9 +5,12 @@ const day = document.getElementById('day');
 const body = document.querySelector('body');
 const title= document.querySelector('h1');
 const head= document.getElementsByClassName('head');
+const result = document.getElementById('result');
 
 
 const update = async(city)=>{
+
+  
 
        const gettingCityInfo = await theCity(city);
        const gettingId = await weatherInfo(gettingCityInfo.Key);
@@ -34,6 +37,8 @@ const update = async(city)=>{
 formm.addEventListener('submit', (e)=>{
 
     e.preventDefault();
+   
+
 
     const cityName = formm.city.value.trim();
     
@@ -41,6 +46,9 @@ formm.addEventListener('submit', (e)=>{
 
     //show in browser
 grabbed.innerText = cityName;
+if(result.classList.contains('d-none')){
+    result.classList.remove('d-none');
+}
 
 update(cityName);
   
